@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,body {
+            height: 100%;
+        }
+        body {
+            font-size: 14px;
+            font-family: "Arial","Microsoft YaHei","黑体",sans-serif;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .loading {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background-image: url(https://media3.giphy.com/media/L05HgB2h6qICDs5Sms/source.gif);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 32px;
+            height: 32px;
+        }
+        #app {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading"></div>
+    <div id="app"></div>
+</body>
+</html>

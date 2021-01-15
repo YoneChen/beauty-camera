@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+        "@/*": [
+            "src/*"
+        ]
+    },
+    "outDir": "dist",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "target": "es5",
+    "lib": ["ESNext","DOM"],
+    "sourceMap": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "postcss.config.js",
+    ".eslintrc.js"
+  ]
+}
