@@ -5,10 +5,6 @@ function resolve(dir) {
 }
 
 module.exports = {
-  handFire: {
-    import: resolve('../src/views/hand-fire/index.ts'),
-    dependOn: 'core',
-  },
   faceMagic: {
     import: resolve('../src/views/face-magic/index.ts'),
     dependOn: 'core',
