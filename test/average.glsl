@@ -8,15 +8,15 @@ uniform float u_time;
 uniform sampler2D u_texture_0;
 
 // #define uv gl_FragCoord.xy/u_resolution.xy
-#define coreSize 3
+#define coreSize 10
 #define halfSize coreSize/2
 void main() {
     vec2 uv = gl_FragCoord.xy/u_resolution.xy;
-    float texelOffset = 1. / 500.0;
+    vec2 offest = 1. / u_resolution.xy;
     vec3 color= vec3(0.);
     for(int i = 0; i < coreSize; i++) {
       for(int j = 0; j < coreSize; j++) {
-        vec3 currentColor = texture2D(u_texture_0,uv+vec2(float(-halfSize+i)*texelOffset,float(-halfSize+j)*texelOffset)).xyz;
+        vec3 currentColor = texture2D(u_texture_0,uv+ offest * vec2(float(-halfSize+i),float(-halfSize+j))).xyz;
         color += currentColor;
       }
     }
