@@ -8,8 +8,8 @@ uniform float u_time;
 uniform sampler2D u_texture_0;
 
 vec3 surfaceBlur(in sampler2D tex, in vec2 uv, in vec2 offset){
-    const float Y = 68.0;
-    const float r = 5.;
+    const float Y = 78.0;
+    const float r = 8.;
     // rgb Separate calculation
     vec3 center_c = texture2D(tex, uv).rgb;
     vec3 sum_c = vec3(0.0);

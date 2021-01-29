@@ -49,7 +49,7 @@ vec3 guassionBlur(in sampler2D tex, in vec2 uv, in vec2 offset)
 
 void main() {
   vec2 uv = gl_FragCoord.xy / u_resolution.xy;
-    vec2 offest = 1. / u_resolution.xy;
-    vec3 color = guassionBlur(u_texture_0, uv, offest);
+    vec2 offset = 1. / u_resolution.xy;
+    vec3 color = guassionBlur(u_texture_0, uv, offset);
     gl_FragColor = vec4(color, 1.);
 }
