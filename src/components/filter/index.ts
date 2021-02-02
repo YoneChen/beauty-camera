@@ -16,6 +16,7 @@ class Filter extends Object3D {
     [key: string]: { value: any }
     uTexture: { value: Texture; };
     time: { value: number; };
+    uResolution: { value: [ number, number ]}
   };
 
   constructor({
@@ -26,6 +27,7 @@ class Filter extends Object3D {
     this.uniforms = {
       uTexture: { value: texture },
       time: { value: 1.0 },
+      uResolution: { value: [width, height] },
       ...uniforms,
     };
     const material = new ShaderMaterial({

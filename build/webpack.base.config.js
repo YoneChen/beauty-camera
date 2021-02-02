@@ -8,10 +8,7 @@ module.exports = {
   // context: path.resolve(__dirname, '../'),
   entry: {
     core: 'three',
-    index: {
-      import: resolve('../src/index.ts'),
-      dependOn: 'core',
-    },
+    ...entry
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
